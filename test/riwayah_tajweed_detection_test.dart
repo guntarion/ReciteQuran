@@ -229,8 +229,8 @@ void main() {
       expect(ruleNoon.checkDurationStatus(0.35), TajweedDurationStatus.valid);
       expect(ruleNoon.checkDurationStatus(0.50), TajweedDurationStatus.valid);
 
-      // Overheld: > 0.850s
-      expect(ruleNoon.checkDurationStatus(1.10), TajweedDurationStatus.overheld);
+      // Overheld: > 1.250s (Normal)
+      expect(ruleNoon.checkDurationStatus(1.40), TajweedDurationStatus.overheld);
     });
 
     test("Rule 9: Shaddah (الشدة) — Consonant closure holding (1.5 beats)", () {

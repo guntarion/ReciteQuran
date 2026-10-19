@@ -723,6 +723,11 @@ class ErrorExplainer {
     if (span.isShaddah) {
       if (spanDuration <= 0.0) return errors;
 
+      // ASR already emitted the doubled consonant: the gemination is satisfied
+      // regardless of how briefly each frame was held.
+      final String base = span.baseChar;
+      if (base.isNotEmpty && predText.contains(base + base)) return errors;
+
       return _evaluateDurationRule(
         rule: const ShaddahRule(),
         span: span,
