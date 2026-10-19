@@ -35,6 +35,7 @@ flutter:
   assets:
     - assets/fonts/HafsSmart_08.ttf
     - assets/icon/app_icon.png
+    - assets/model/zipformer_p_arabic_v3.int8.onnx
 
   fonts:
     - family: HafsSmart
